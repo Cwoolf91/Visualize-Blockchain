@@ -1,12 +1,10 @@
-import Dashboard from "./views/Dashboard";
+import { Dashboard } from "./views/Dashboard";
 
 var routes = [
   {
     path: "/dashboard",
     name: "Dashboard",
-    icon: "tim-icons icon-chart-pie-36",
-    component: Dashboard,
-    layout: "/admin"
+    component: Dashboard
   }
 ];
 export default routes;
