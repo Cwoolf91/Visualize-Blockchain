@@ -12,18 +12,16 @@ export class Blockchain {
     private readonly chain: Block[] = [];
 
     // retrieve the latest block
-    private get latestBlock(): Block {
+    get latestBlock(): Block {
         return this.chain[this.chain.length - 1];
     }
 
     // default constructor
     private constructor() {
-        
         // variables to initiate with random data
-        let start = Math.random();
         let startData = Math.random().toString();
         this.chain.push(
-            new Block(start, startData, Date.now(), 'Genesis Block')
+            new Block(0, startData, Date.now(), 'Genesis Block')
         );
     }
 
@@ -36,7 +34,7 @@ export class Blockchain {
     }
 
     // add a new block
-    addBlock(data: string): void {
+    public addBlock(data: string): void {
         const block = new Block(
             this.latestBlock.index + 1,
             this.latestBlock.hash,

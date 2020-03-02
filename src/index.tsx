@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom';
 import './assets/css/index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { Router, Route, Switch, Link } from "react-router-dom";
+import { Router, Route, Switch, } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import { Dashboard } from './views/Dashboard';
+
+import "./assets/scss/black-dashboard-react.scss";
+import "./assets/css/nucleo-icons.css";
 
 const hist = createBrowserHistory();
 

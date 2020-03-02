@@ -36,7 +36,7 @@ export class Block {
         do {
             nonce = Math.random();
             hash = this.calculateHash(nonce);
-        } while (hash.startsWith('00000') === false);
+        } while (hash.startsWith('000') === false);
 
         return { nonce, hash }
     }
