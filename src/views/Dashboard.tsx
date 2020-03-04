@@ -61,7 +61,7 @@ export class Dashboard extends React.Component<{}, LastBlock> {
         return (
             <div className="content">
                 <Row>
-                    <Col xs="12">
+                    <Col xs="4">
                         <Card>
                             <CardHeader>
                                 <Row>
@@ -79,7 +79,31 @@ export class Dashboard extends React.Component<{}, LastBlock> {
                                         <ListGroupItem><u>Timestamp Value:</u> {this.state.timestamp}</ListGroupItem>
                                     </ListGroup>
                                 </div>
-                                <div className="display-area">
+                                <div>
+                                    <Button onClick={this.mine}>Add a block</Button>
+                                </div>
+                            </CardBody>
+                        </Card>
+                    </Col>
+                    <Col xs="4">
+                        <Card>
+                            <CardHeader>
+                                <Row>
+                                    <Col className="text-left" sm="6">
+                                        <h5 className="card-category">Blockchain Test</h5>
+                                        <CardTitle tag="h3">Last Block</CardTitle>
+                                    </Col>
+                                </Row>
+                            </CardHeader>
+                            <CardBody>
+                                <div>
+                                    <ListGroup className="display-area">
+                                        <ListGroupItem><u>Hash Value:</u> {this.state.hash}</ListGroupItem>
+                                        <ListGroupItem><u>Index Value:</u> {this.state.index}</ListGroupItem>
+                                        <ListGroupItem><u>Timestamp Value:</u> {this.state.timestamp}</ListGroupItem>
+                                    </ListGroup>
+                                </div>
+                                <div>
                                     <Button onClick={this.mine}>Add a block</Button>
                                 </div>
                             </CardBody>
