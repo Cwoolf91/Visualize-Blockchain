@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import { Router, Route, Switch, } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import { Dashboard } from './views/Dashboard';
+import { AdminLayout } from "./layouts/AdminLayout";
 
 import "./assets/scss/black-dashboard-react.scss";
 import "./assets/css/nucleo-icons.css";
@@ -16,7 +17,7 @@ ReactDOM.render(
     <Router history={hist}>
         <Switch>
             <Route exact path="/" component={App} />
-            <Route exact path="/dashboard" component={Dashboard} />
+            <Route path="/admin" render={props => <AdminLayout {...props} />} />
         </Switch>
     </Router>, document.getElementById('root'));
 

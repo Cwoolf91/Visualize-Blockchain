@@ -23,7 +23,6 @@ import {
     ListGroupItem,
     UncontrolledTooltip
 } from "reactstrap";
-import { Block } from "../components/Block";
 
 // Interface to display relevant block data
 interface LastBlock {
